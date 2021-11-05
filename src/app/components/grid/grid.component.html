@@ -1,0 +1,17 @@
+<table class="table" *ngIf="operaciones != null && operaciones.length > 0">
+    <thead>
+        <tr>
+            <td scope="col">#</td>
+            <td scope="col">Tipo Operación</td>
+            <td scope="col">Operación</td>
+            <td scope="col">Resultado</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of operaciones; index as i">
+            <th>{{i+1}}</th>
+            <th>{{item.tipoOperacion}}</th>
+            <th>{{item.operacion}}</th>
+            <th>{{item.resultado}}</th>
+        </tr>
+    </tbody>
